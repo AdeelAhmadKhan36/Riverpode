@@ -25,9 +25,32 @@ class SliderScreen extends ConsumerWidget {
       mainAxisAlignment: MainAxisAlignment.center,
      crossAxisAlignment: CrossAxisAlignment.center,
      children: [
+       Consumer(builder: (context, ref , child){
+         // final opaicty=ref.watch(Slider_provider);
 
-           Consumer(builder: (context, ref , child){
-             final slider=ref.watch(Slider_provider);
+          final slider=ref.watch(Slider_provider.select((state)=>state.showpassword));
+
+
+         print("icons");
+         return        InkWell(
+           onTap: (){
+             final statpro=  ref.read(Slider_provider.notifier);
+             statpro.state=statpro.state.copywith(showpassword: !slider);
+           },
+           child: Container(
+             height: 200,
+             width: 200,
+             child: slider?Icon(Icons.add):Icon(Icons.access_time_rounded),
+           ),
+         );
+
+       }),
+
+       Consumer(builder: (context, ref , child){
+             // final opaicty=ref.watch(Slider_provider);
+
+             final slider=ref.watch(Slider_provider.select((state)=>state.slider));
+
 
              print("Contaier");
              return        Container(
@@ -39,12 +62,16 @@ class SliderScreen extends ConsumerWidget {
            }),
 
        Consumer(builder: (context, ref , child){
-         final slider=ref.watch(Slider_provider);
+         // final slider=ref.watch(Slider_provider);
+         final slider=ref.watch(Slider_provider.select((state)=>state.slider));
+
+
 
          print("Slider");
 
-         return        Slider(value: slider, onChanged: (value){
-           ref.read(Slider_provider.notifier).state=value;
+         return Slider(value: slider, onChanged: (value){
+           final statpro=  ref.read(Slider_provider.notifier);
+           statpro.state=statpro.state.copywith(slider: value);
          });
 
        }),
