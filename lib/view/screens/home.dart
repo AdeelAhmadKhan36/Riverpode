@@ -30,6 +30,19 @@ class Home_Screen extends ConsumerWidget {
 
             return           Text(searching.search);
 
+          }),
+          Consumer(builder: (context, ref ,child ){
+            // final searching =ref.watch(searchprovider);
+              //Only this state should be updated then
+            final isChange =ref.watch((searchprovider).select((state)=>state.isChange));
+
+
+            return Switch(value: isChange, onChanged: (value){
+              ref.read(searchprovider.notifier).isChnage(value);
+
+
+            });
+
           })
         ],
       ),

@@ -4,6 +4,7 @@ import 'package:riverpode_statmanagment/view/screens/counter.dart';
 import 'package:riverpode_statmanagment/view/screens/home.dart';
 import 'package:riverpode_statmanagment/view/screens/provider_in_riverpode.dart';
 import 'package:riverpode_statmanagment/view/screens/slider_provider.dart';
+import 'package:riverpode_statmanagment/view/screens/to_do_home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
           // tested with just a hot reload.
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         ),
-        home:Home_Screen(),
+        home:ToDoHome(),
       ),
     );
   }

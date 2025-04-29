@@ -14,11 +14,14 @@ final searchprovider= StateNotifierProvider<SearchNotifier, SearchState>((ref){
 });
 
 class SearchNotifier extends StateNotifier<SearchState >{
-             SearchNotifier():super(SearchState(search: ""));
+             SearchNotifier():super(SearchState(search: '',  isChange: false ));
 
 
              void search(String query){
                state=state.copywith(search: query);
+             }
+             void isChnage(bool isChange){
+               state=state.copywith(isChange: isChange);
              }
 }
 
@@ -26,14 +29,18 @@ class SearchNotifier extends StateNotifier<SearchState >{
 //We are using string it will be converetd into multiple states
 class SearchState{
   final String search;
+  final bool isChange;
 
-  SearchState({required this.search});
+
+  SearchState( {required this.search,required this.isChange,});
 
   SearchState copywith({
-    String?search
+    String?search,
+    bool?isChange
 }){
     return SearchState(
       search:search?? this.search,
+      isChange:isChange??this.isChange,
     );
   }
 }
