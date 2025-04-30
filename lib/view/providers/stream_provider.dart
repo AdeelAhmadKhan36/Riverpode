@@ -13,8 +13,8 @@ final socketPriceProvider=StreamProvider((ref)async*{
   while(true){
     await Future.delayed(Duration(seconds: 2));
     currentPrice+=random.nextDouble()*4-2;
-    throw 'Unexpected Error Occured';
-    // yield double.parse(currentPrice.toStringAsFixed(2));
+     throw 'Unexpected Error Occured';
+       yield double.parse(currentPrice.toStringAsFixed(2));
 
   }
 

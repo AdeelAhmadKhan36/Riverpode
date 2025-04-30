@@ -16,7 +16,7 @@ class Stream_Home extends ConsumerWidget {
     return  Scaffold(
 
       appBar: AppBar(
-        title: Center(child: Text("",style: TextStyle(color:Colors.white,),)),
+        title: Center(child: Text("Stream ",style: TextStyle(color:Colors.white,),)),
         backgroundColor: Colors.indigo,
 
       ),

@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpode_statmanagment/view/screens/home.dart';
 import 'package:riverpode_statmanagment/view/screens/stream_home.dart';
 
+import 'Get_API/view/home_getapi.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         ),
-        home: Stream_Home(), // Make sure class name matches file
+        home: get_home(), // Make sure class name matches file
       ),
     );
   }
