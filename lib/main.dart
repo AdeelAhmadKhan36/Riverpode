@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpode_statmanagment/view/screens/counter.dart';
+import 'package:riverpode_statmanagment/view/screens/future_screen.dart';
 import 'package:riverpode_statmanagment/view/screens/home.dart';
 import 'package:riverpode_statmanagment/view/screens/provider_in_riverpode.dart';
 import 'package:riverpode_statmanagment/view/screens/slider_provider.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
 
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         ),
-        home:FavouriteHome(),
+        home:FutureScreen(),
       ),
     );
   }

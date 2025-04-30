@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpode_statmanagment/view/controller/search_provider.dart';
+
+import '../providers/search_provider.dart' show searchprovider;
 class Home_Screen extends ConsumerWidget {
   const Home_Screen({super.key});
 

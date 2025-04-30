@@ -4,7 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../controller/slider_pro.dart';
+import '../providers/slider_pro.dart';
+
 
 class SliderScreen extends ConsumerWidget {
   const SliderScreen({super.key});
